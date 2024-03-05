@@ -30,10 +30,10 @@ const SignUp = ()=>{
             Name,Email,Password
         })
         alert("Successfully Save ...")
-        setLoading(true);
+        setLoading(false);
         navigate('/login')
     } catch (error) {
-        setLoading(true);
+        setLoading(false);
             alert(error);
     }
     }
