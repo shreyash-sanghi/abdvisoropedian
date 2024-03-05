@@ -60,7 +60,7 @@ const SignUp = ()=>{
                      <DotSpinner size={40} speed={0.9} color="blue" className="flex items-center  justify-center mx-auto" />
                  </div>
                   ) : (
-                    <button className="button" onClick={save}>Sign Up</button> 
+                    <button className="button" onClick={savedata}>Sign Up</button> 
                   )}
         <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>

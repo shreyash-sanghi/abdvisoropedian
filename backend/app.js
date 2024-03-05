@@ -10,7 +10,7 @@ const cors = require('cors');
 //Set Cors Policy
 app.use(cors(
     {
-      origin:"http://localhost:5173",
+      origin:"https://abdvisoropedian.vercel.app",
        methods: ["POST", "GET","OPTIONS", "PATCH", "PUT", "DELETE"],
       credentials: true,
     }
