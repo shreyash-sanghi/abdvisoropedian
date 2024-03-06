@@ -38,7 +38,7 @@ const Sign = ()=>{
    }
   } catch (error) {
     setLoading(false);
-      alert("Invalid Details please Singn In again...")
+      alert("Invalid Details please Sing In again...")
   }
   }
   
