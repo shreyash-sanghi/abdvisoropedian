@@ -26,7 +26,7 @@ const SignUp = ()=>{
         try {
             setLoading(true);
         const {Name,Email,Password} = initial;
-        const response = await axios.post("http://localhost:5000/signup",{
+        const response = await axios.post("https://abdvisoropedian-1wdb.vercel.app/signup",{
             Name,Email,Password
         })
         alert("Successfully Save ...")
