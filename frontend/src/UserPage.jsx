@@ -44,7 +44,7 @@ try {
 const verifyuser = async()=>{
     try {
         axios.defaults.headers.common["Authorization"] = token;
-      const response = await axios.get("http://localhost:5000/postlist");
+      const response = await axios.get("https://abdvisoropedian-1wdb.vercel.app/postlist");
       const Name = response.data.Name;
       finName(Name);
     } catch (error) {
