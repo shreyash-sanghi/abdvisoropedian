@@ -59,7 +59,7 @@ const SignUp = ()=>{
                      <DotSpinner size={40} speed={0.9} color="blue" className="flex items-center  justify-center mx-auto" />
                  </div>
                   ) : (
-                    <input type="submit" className="signup_button bg-purple-600 text-white" >Sign Up</input> 
+                    <input type="submit" value={"Sign Up"} className="signup_button bg-purple-600 text-white" ></input> 
                   )}
     </form>   
         </div>
