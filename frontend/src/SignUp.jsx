@@ -26,7 +26,7 @@ const SignUp = ()=>{
         try {
             setLoading(true);
         const {Name,Email,Password} = initial;
-        const response = await axios.post("https://abdvisoropedian-1wdb.vercel.app/signup",{
+        const response = await axios.post("http://localhost:5000/signup",{
             Name,Email,Password
         })
         alert("Successfully Save ...")
@@ -37,8 +37,12 @@ const SignUp = ()=>{
             alert(error);
     }
     }
+    
     return(
-        <div className="body">
+        <>
+        
+
+        {/* <div className="body">
         <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
@@ -68,8 +72,32 @@ const SignUp = ()=>{
         </div>    </form>
 
     
+        </div> */}
+
+<div className="main_root">
+
+<div class="main">  	
+    <div class="signup">
+            <form method="POST">
+                <label className="label" for="chk" aria-hidden="true">Sign Up</label>
+                <input  className="sign_input" type="text" onChange={setdata} name="Name" placeholder="Full Name" required/>
+                <input  className="sign_input" type="email" onChange={setdata} required name="Email" placeholder="Email" />
+                <input  className="sign_input" type="password" name="Password" required onChange={setdata} placeholder="Password" />
+                {/* <input type="submit" value="Log in" className="" ></input> */}
+                {loading ? (
+                      <div className="flex mt-10 justify-evenly ">
+                     <DotSpinner size={40} speed={0.9} color="white" className="flex items-center  justify-center mx-auto" />
+                     <DotSpinner size={40} speed={0.9} color="red" className="flex items-center  justify-center mx-auto" />
+                     <DotSpinner size={40} speed={0.9} color="blue" className="flex items-center  justify-center mx-auto" />
+                 </div>
+                  ) : (
+                    <button className="signup_button bg-purple-600 text-white" onClick={savedata}>Sign Up</button> 
+                  )}
+    </form>   
         </div>
-        
+</div>
+</div>
+        </>
     )
 }
 export default SignUp;
